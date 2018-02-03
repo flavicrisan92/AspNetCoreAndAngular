@@ -8,7 +8,7 @@ import { ApiService } from '../api.service';
 
 export class QuestionComponent {
 
-    question = {}
+    question = new Question();
 
     constructor(private api: ApiService) { }
 
@@ -23,5 +23,14 @@ export class QuestionComponent {
     putQuestion(question) {
         this.api.put(question);
     }
+
+}
+class Question{
+    id:number
+    text: string
+    correctAnswer:string
+    answer1:string
+    answer2:string
+    answer3:string
 
 }
